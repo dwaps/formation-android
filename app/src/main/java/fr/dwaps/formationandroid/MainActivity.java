@@ -37,14 +37,14 @@ public class MainActivity extends Activity {
     public void load(View v) throws Exception {
         FileInputStream fis = openFileInput(FILENAME);
         StringBuilder sb = new StringBuilder();
-        int c;
+        byte[] buffer = new byte[1024];
 
         if (fis != null) {
-            while((c = fis.read()) != -1) {
-                sb.append((char) c);
+            while(fis.read(buffer) != -1) {
+                sb.append(new String(buffer));
             }
 
-            et.setText(sb.toString()); // et --> EditText
+            et.setText(sb.toString());
             fis.close();
         }
     }
