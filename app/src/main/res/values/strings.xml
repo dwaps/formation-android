@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">FormationAndroid</string>
+    <string name="show_db_sqlite">SHOW DB SQLite</string>
+    <string name="delete">DELETE</string>
+    <string name="load">LOAD</string>
+    <string name="save">SAVE</string>
 </resources>
